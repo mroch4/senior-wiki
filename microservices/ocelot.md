@@ -1,4 +1,4 @@
-# Ocelot
+# OCELOT
 
 > Ocelot is an API Gateway for .NET microservices. Instead of clients calling each microservice directly, they call Ocelot, which routes the request to the correct service.
 
