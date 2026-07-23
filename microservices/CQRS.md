@@ -138,8 +138,6 @@ Those concerns are different.
 - business rules
 - consistency
 
----
-
 ## Read models vs Write models
 
 A key CQRS concept is using **different** models for reading and writing.
@@ -185,23 +183,17 @@ UpdateOrderHandler
 only writes
 ```
 
----
-
 ### 2. Easier testing
 
 You test one use case at a time.
 
 ```text
 Test CreateOrderHandler
-
-↓
-
+ |
 Verify order exists
 ```
 
 No unrelated methods to mock.
-
----
 
 ### 3. Better performance
 
@@ -213,8 +205,6 @@ Read handlers can:
 - project directly to DTOs
 
 Write handlers focus on enforcing business rules.
-
----
 
 ### 4. Better organization
 
@@ -234,8 +224,6 @@ Queries
 ```
 
 This scales well as applications grow.
-
----
 
 ## CQRS and MediatR
 
@@ -289,8 +277,6 @@ RabbitMQ / Azure Service Bus / Kafka
 ```
 
 Other microservices consume the event and update their own data, supporting eventual consistency.
-
----
 
 ## Senior interview perspective
 

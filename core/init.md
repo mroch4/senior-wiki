@@ -19,8 +19,6 @@ person.Name = "Mike";   // ✅ Can change anytime
 
 The property can be modified at any point.
 
----
-
 ### `get; init;` (Immutable after creation)
 
 ```csharp
@@ -42,8 +40,6 @@ The property can only be assigned:
 - in an object initializer,
 - in a constructor,
 - or within a `with` expression for records.
-
----
 
 ## Why is it useful?
 
@@ -71,8 +67,6 @@ Once created, nobody can accidentally change the `OrderId` or `CustomerId`.
 
 This is ideal because messages represent **facts**—for example, "Order 1234 was created." That fact shouldn't change after it's been published.
 
----
-
 ## Records and `init`
 
 You'll often see `init` used with records:
@@ -92,8 +86,6 @@ public record OrderCreated
 ```
 
 Records are designed to represent immutable data, so `init` fits naturally.
-
----
 
 ## How is it different from `private set`?
 
@@ -120,8 +112,6 @@ public string Name { get; init; }
 ```
 
 Even the class cannot change the property after initialization.
-
----
 
 ## Interview question
 

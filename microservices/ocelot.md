@@ -54,8 +54,6 @@ Suppose you have:
 }
 ```
 
----
-
 ## What does each property mean?
 
 ### Upstream

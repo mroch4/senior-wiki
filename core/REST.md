@@ -34,8 +34,6 @@ ASP.NET Core API
 - load balancing
 - simpler caching - because responses depend only on the request, caches become predictable and safe
 
----
-
 ### 3. Cacheable
 
 ### 4. Uniform Interface
@@ -62,8 +60,6 @@ Bad
 ```
 
 Instead, the HTTP method determines the operation.
-
----
 
 ### 5. Layered System
 
@@ -92,8 +88,6 @@ Database
 ### 6. Code on Demand (optional)
 
 A server may send executable code. Almost never used in modern APIs.
-
----
 
 ## HTTP Methods
 
@@ -130,8 +124,6 @@ Means processing will happen later (common in asynchronous or event-driven syste
 - Forces clients to update URLs
 - Harder to evolve gradually
 
----
-
 ### Header Versioning
 
 `Accept: application/vnd.myapp.v2+json`
@@ -147,8 +139,6 @@ Means processing will happen later (common in asynchronous or event-driven syste
 - Harder to test manually
 - Less visible to developers
 - Requires more tooling support
-
----
 
 ### Query Parameter Versioning
 
@@ -166,8 +156,6 @@ Means processing will happen later (common in asynchronous or event-driven syste
 - Can be ignored by caches
 - Considered less formal
 
----
-
 ### Resource Expansion / No Versioning
 
 Evolve the API without breaking old clients.
@@ -182,8 +170,6 @@ Evolve the API without breaking old clients.
 
 - Requires extremely careful design
 - Harder for teams without strong API governance
-
----
 
 ## Error handling
 
