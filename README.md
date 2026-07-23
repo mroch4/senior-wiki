@@ -4,6 +4,7 @@
 - [REST](Core/REST.md)
 - [Async/Await](Core/async await.md)
 - [init](Core/init.md)
+- [record](Core/record.md)
 - [Dependency Injection](Core/DI.md)
 
 ## Microservices
@@ -39,6 +40,5 @@
 
 ### Misc
 
-OAuth, OAuth2, JWT
-Entity Framework/Dapper
-Blazor
+- OAuth, OAuth2, JWT
+- Entity Framework/Dapper
