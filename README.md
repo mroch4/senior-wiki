@@ -10,6 +10,7 @@
 ## Microservices
 
 - [MinimalAPIs](Microservices/MinimalAPIs.md)
+- [gRPC](Microservices/gRPC.md)
 - [MediatR](Microservices/MediatR.md)
 - [CQRS](Microservices/CQRS.md)
 - [OCELOT](Microservices/OCELOT.md)

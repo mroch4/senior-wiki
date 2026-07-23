@@ -1,5 +1,9 @@
 # RESTful APIs
 
+## Table of content
+
+## What is RESTful APIs?
+
 > A RESTful API is an API that follows the architectural principles of **REST (Representational State Transfer)**. It exposes resources through a uniform interface using standard HTTP methods. It is **stateless**, **cacheable**, and follows architectural constraints like **client–server** separation and **layered systems**. Resources are represented with URLs, and operations are performed via GET/POST/PUT/PATCH/DELETE.
 
 It is an **architectural style** for designing distributed systems.

@@ -1,4 +1,25 @@
-# Record
+# Record Type
+
+## Table of Content
+
+1. [What is a record type?](#what-is-a-record-type)
+2. [Class vs Record](#class-vs-record)
+3. [Example with a class](#example-with-a-class)
+4. [Example with a record](#example-with-a-record)
+5. [`with` expression](#with-expression)
+6. [ToString()](#tostring)
+7. [Immutability](#immutability)
+8. [Record class vs Record struct](#record-class-vs-record-struct)
+9. [Typical use cases](#typical-use-cases)
+   - [DTOs](#dtos)
+   - [CQRS Commands](#cqrs-commands)
+   - [Queries](#queries)
+   - [Events](#events)
+   - [Configuration models](#configuration-models)
+10. [When NOT to use records](#when-not-to-use-records)
+11. [Interview Tips](#interview-tips)
+
+## What is a record type?
 
 > `record` is a **reference** type introduced in C# 9 designed for **immutable data models**. While a `record` looks similar to a `class`, it has very different default behavior.
 
@@ -194,6 +215,6 @@ public class BankAccount
 
 These objects have **behavior** and **mutable** state, so value-based equality would be misleading.
 
-## Interview answer (30–45 seconds)
+# Interview Tips
 
 > "A record is a C# reference type optimized for representing immutable data. Unlike a class, records use value-based equality, so two record instances with the same property values are considered equal. They also provide built-in support for cloning with the `with` expression and a useful `ToString()` implementation. I typically use records for DTOs, CQRS commands and queries, API contracts, and domain events. I use classes for entities or services that have identity, behavior, and mutable state."

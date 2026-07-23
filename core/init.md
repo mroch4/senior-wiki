@@ -1,5 +1,19 @@
 # init;
 
+## Table of content
+
+1. [What is init?](#what-is-init)
+2. [Comparison](#comparison)
+   - [`get; set;` (Mutable)](#get-set-mutable)
+   - [`get; init;` (Immutable after creation)](#get-init-immutable-after-creation)
+3. [Why is it useful?](#why-is-it-useful)
+4. [Records and `init`](#records-and-init)
+5. [How is it different from `private set`?](#how-is-it-different-from-private-set)
+6. [Interview Tips](#interview-tips)
+7. [Rule of thumb](#rule-of-thumb)
+
+## What is init?
+
 `get; init;` is a C# feature (introduced in C# 9) that creates an **init-only property**. It means the property can be assigned **only during object initialization**, after which it becomes immutable.
 
 ## Comparison
@@ -113,15 +127,13 @@ public string Name { get; init; }
 
 Even the class cannot change the property after initialization.
 
-## Interview question
+# Interview Tips
 
-**Q: Why would you use `init` instead of `set`?**
-
-**Answer:**
+`Why would you use `init`instead of`set`?`
 
 > "`init` allows properties to be assigned only during object creation, making objects immutable afterward. Immutable objects are safer in concurrent applications, prevent accidental modification, and are well-suited for DTOs, events, configuration objects, and messages in distributed systems like MassTransit."
 
-### Rule of thumb
+## Rule of thumb
 
 - **`get; set;`** → Mutable business entities whose state changes over time.
 - **`get; init;`** → Immutable DTOs, API models, configuration objects, and event/command messages.

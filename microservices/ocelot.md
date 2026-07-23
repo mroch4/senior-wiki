@@ -1,4 +1,25 @@
-# OCELOT
+# Ocelot
+
+## Table of Content
+
+1. [What is Ocelot?](#what-is-ocelot)
+2. [Basic configuration](#basic-configuration)
+3. [What does each property mean?](#what-does-each-property-mean)
+   - [Upstream](#upstream)
+   - [Downstream](#downstream)
+   - [DownstreamHostAndPorts](#downstreamhostandports)
+   - [DownstreamScheme](#downstreamsсheme)
+   - [HTTP Methods](#http-methods)
+4. [Load balancing](#load-balancing)
+5. [Authentication](#authentication)
+6. [Rate limiting](#rate-limiting)
+7. [Swagger aggregation](#swagger-aggregation)
+8. [Startup configuration](#startup-configuration)
+9. [Request flow](#request-flow)
+10. [Interview Tips](#interview-tips)
+11. [Ocelot vs YARP](#ocelot-vs-yarp)
+
+## What is Ocelot?
 
 > Ocelot is an API Gateway for .NET microservices. Instead of clients calling each microservice directly, they call Ocelot, which routes the request to the correct service.
 
@@ -232,7 +253,7 @@ Ocelot
 Client
 ```
 
-## Typical interview discussion
+# Interview Tips
 
 For a Senior .NET Microservices role, you should know that Ocelot can also provide:
 

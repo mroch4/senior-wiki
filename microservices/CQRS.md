@@ -1,5 +1,30 @@
 # CQRS
 
+## Table of Content
+
+1. [What is CQRS?](#what-is-cqrs)
+2. [Without CQRS](#without-cqrs)
+3. [With CQRS](#with-cqrs)
+4. [Commands](#commands)
+5. [Queries](#queries)
+6. [Why separate them?](#why-separate-them)
+   - [Reading needs](#reading-needs)
+   - [Writing needs](#writing-needs)
+7. [Read models vs Write models](#read-models-vs-write-models)
+8. [Benefits](#benefits)
+   - [1. Single Responsibility](#1-single-responsibility)
+   - [2. Easier testing](#2-easier-testing)
+   - [3. Better performance](#3-better-performance)
+   - [4. Better organization](#4-better-organization)
+9. [CQRS and MediatR](#cqrs-and-mediatr)
+10. [Does CQRS require two databases?](#does-cqrs-require-two-databases)
+    - [Simple CQRS (most common)](#simple-cqrs-most-common)
+    - [Advanced CQRS](#advanced-cqrs)
+11. [CQRS in microservices](#cqrs-in-microservices)
+12. [Interview Tips](#interview-tips)
+
+## What is CQRS?
+
 **CQRS (Command Query Responsibility Segregation)** is an architectural pattern that separates **operations that change data** from **operations that read data**.
 
 - **Commands** = write/change state
@@ -278,7 +303,7 @@ RabbitMQ / Azure Service Bus / Kafka
 
 Other microservices consume the event and update their own data, supporting eventual consistency.
 
-## Senior interview perspective
+# Interview Tips
 
 A common misconception is that **CQRS means "two databases."** In reality, CQRS is primarily about **separating reads from writes in your code**. Using separate databases or read models is an optimization for systems with high scale or specialized read requirements.
 
