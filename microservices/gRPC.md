@@ -164,8 +164,6 @@ Map service:
 app.MapGrpcService<ProductGrpcService>();
 ```
 
----
-
 ## Client
 
 ```csharp
@@ -196,8 +194,6 @@ Server
 
 Equivalent to REST.
 
----
-
 ### Server Streaming
 
 One request => Many responses
@@ -223,23 +219,17 @@ Examples:
 ### Client Streaming
 
 Many requests
-
-↓
-
+|
 One response
 
 Example:
 
 Uploading a large file in chunks.
 
----
-
 ### Bidirectional Streaming
 
 Many requests
-
-↓
-
+|
 Many responses
 
 Both client and server send messages simultaneously.
@@ -250,8 +240,6 @@ Example:
 - Multiplayer games
 - Live collaboration
 - IoT telemetry
-
----
 
 ## REST vs gRPC
 
