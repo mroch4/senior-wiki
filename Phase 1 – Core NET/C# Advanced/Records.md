@@ -1,4 +1,4 @@
-# Record Type
+# Records
 
 ## Table of Content
 
