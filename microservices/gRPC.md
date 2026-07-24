@@ -22,7 +22,7 @@
 
 ## What is gRPC?
 
-gRPC is a high-performance Remote Procedure Call (RPC) framework developed by Google.
+> gRPC is a high-performance Remote Procedure Call (RPC) framework developed by Google.
 
 Instead of sending HTTP requests to URLs like REST, clients call methods on remote services almost as if they were local methods.
 
