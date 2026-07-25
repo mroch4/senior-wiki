@@ -7,3 +7,7 @@
 - Integration Tests
 - Unit Tests
 - TestContainers (nice bonus)
+
+Typical question:
+
+> What should NOT be mocked?

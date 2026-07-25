@@ -15,6 +15,10 @@
 - Reflection
 - Source Generators (high level)
 
+Typical question:
+
+> Explain what happens internally when you use async/await.
+
 ### ASP.NET Core
 
 - [Middleware pipeline](/Phase%201%20–%20Core%20NET/ASP.NET%20Core/Middleware.md)
@@ -29,6 +33,10 @@
 - Health Checks
 - Background Services
 
+Typical question:
+
+> Why shouldn't DbContext be Singleton?
+
 ### Entity Framework Core
 
 - Change Tracking
@@ -42,3 +50,7 @@
 - Migrations
 - Compiled Queries
 - Bulk operations
+
+Typical question:
+
+> How would you optimize a query returning 100k rows?

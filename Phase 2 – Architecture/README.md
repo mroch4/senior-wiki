@@ -4,6 +4,7 @@
 - DRY
 - KISS
 - YAGNI
+- ACID
 - Clean Architecture
 - Onion Architecture
 - Hexagonal Architecture
@@ -13,3 +14,7 @@
 - Repository Pattern
 - Unit of Work
 - Specification Pattern
+
+Typical question:
+
+> When would you NOT use Repository Pattern?
