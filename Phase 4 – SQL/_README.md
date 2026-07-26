@@ -1,13 +1,15 @@
 ## Phase 4 – SQL
 
-- JOINs
-- CTE
-- Window Functions
-- Indexes
-- Execution Plans
-- Deadlocks
-- Isolation Levels
-- Transactions
+1. JOINs
+2. CTE
+3. Window Functions
+4. Indexes
+5. Execution Plans
+6. Deadlocks
+7. Isolation Levels
+8. Transactions
+
+0/8
 
 Typical question:
 
