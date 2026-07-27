@@ -2,6 +2,31 @@
 
 ## Table of content
 
+1. [What is JWT?](#what-is-jwt)
+2. [Authentication Flow](#authentication-flow)
+3. [Access Token vs Refresh Token](#access-token-vs-refresh-token)
+4. [JWT Structure](#jwt-structure)
+   - [Header](#header)
+   - [Payload](#payload)
+     - [Common Claims](#common-claims)
+   - [Signature](#signature)
+5. [Is JWT encrypted?](#is-jwt-encrypted)
+6. [Middleware Order](#middleware-order)
+7. [How ASP.NET Core validates JWT](#how-aspnet-core-validates-jwt)
+8. [Configuring JWT](#configuring-jwt)
+9. [Creating a JWT](#creating-a-jwt)
+10. [Protecting an Endpoint](#protecting-an-endpoint)
+11. [Role-Based Authorization](#role-based-authorization)
+12. [Policy-Based Authorization](#policy-based-authorization)
+13. [JWT in Microservices](#jwt-in-microservices)
+14. [Interview Tips](#interview-tips)
+    - [Why JWT over sessions?](#why-jwt-over-sessions)
+    - [Can users modify a JWT?](#can-users-modify-a-jwt)
+    - [Why shouldn't passwords be stored in JWTs?](#why-shouldnt-passwords-be-stored-in-jwts)
+    - [What happens after a JWT expires?](#what-happens-after-a-jwt-expires)
+    - [What does `UseAuthentication()` do?](#what-does-useauthentication-do)
+    - [What does `UseAuthorization()` do?](#what-does-useauthorization-do)
+
 ## What is JWT?
 
 > JWT (JSON Web Token) is a compact, signed token used to securely transmit information between parties.

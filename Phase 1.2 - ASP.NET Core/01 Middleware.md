@@ -2,6 +2,40 @@
 
 ## Table of content
 
+1. [What is middleware?](#what-is-middleware)
+2. [Pipeline execution](#pipeline-execution)
+3. [How middleware is registered](#how-middleware-is-registered)
+4. [Three middleware registration methods](#three-middleware-registration-methods)
+   - [1. Use()](#1-use)
+   - [2. Run()](#2-run)
+   - [3. Map()](#3-map)
+5. [Built-in middleware](#built-in-middleware)
+   - [Exception handling](#exception-handling)
+   - [HTTPS redirection](#https-redirection)
+   - [HSTS](#hsts)
+   - [Static files](#static-files)
+   - [Routing](#routing)
+   - [Authentication](#authentication)
+   - [Authorization](#authorization)
+   - [CORS](#cors)
+   - [Response Compression](#response-compression)
+   - [Response Caching](#response-caching)
+6. [Middleware ordering](#middleware-ordering)
+7. [Custom middleware](#custom-middleware)
+8. [Extension method](#extension-method)
+9. [Middleware vs Filters](#middleware-vs-filters)
+10. [Middleware vs Delegating Handler](#middleware-vs-delegating-handler)
+11. [Interview Tips](#interview-tips)
+    - [Why use middleware instead of putting code in controllers?](#why-use-middleware-instead-of-putting-code-in-controllers)
+    - [Can middleware short-circuit the pipeline?](#can-middleware-short-circuit-the-pipeline)
+    - [Is middleware singleton?](#is-middleware-singleton)
+    - [Can middleware access dependency injection?](#can-middleware-access-dependency-injection)
+    - [Why is exception handling first?](#why-is-exception-handling-first)
+    - [Why can static files be early?](#why-can-static-files-be-early)
+    - [Why is `UseRouting()` before authorization?](#why-is-userouting-before-authorization)
+    - [Why must `UseAuthentication()` come before `UseAuthorization()`?](#why-must-useauthentication-come-before-useauthorization)
+    - [Senior-level takeaway](#senior-level-takeaway)
+
 ## What is middleware?
 
 A middleware is simply a class (or delegate) that:

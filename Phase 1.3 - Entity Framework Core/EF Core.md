@@ -2,13 +2,27 @@
 
 ## Table of content
 
+1. [What is ORM?](#what-is-orm)
+2. [What is EF Core?](#what-is-ef-core)
+   - [Example](#example)
+   - [Advantages](#advantages)
+   - [Disadvantages](#disadvantages)
+3. [When to avoid the Repository Pattern](#when-to-avoid-the-repository-pattern)
+   - [You're using EF Core directly in a simple application](#youre-using-ef-core-directly-in-a-simple-application)
+   - [Your repository becomes a pass-through](#your-repository-becomes-a-pass-through)
+   - [You need EF Core features](#you-need-ef-core-features)
+   - [You have many complex queries](#you-have-many-complex-queries)
+4. [When a Repository Pattern _is_ useful](#when-a-repository-pattern-is-useful)
+5. [General guideline](#general-guideline)
+6. [Interview Tips](#interview-tips)
+
 ## What is ORM?
 
-**ORM (Object-Relational Mapping)** is a technique that maps database tables to objects in your application. Instead of writing SQL for every operation, you work with C# objects, and the ORM generates the SQL behind the scenes.
+> **ORM (Object-Relational Mapping)** is a technique that maps database tables to objects in your application. Instead of writing SQL for every operation, you work with C# objects, and the ORM generates the SQL behind the scenes.
 
 ## What is EF Core?
 
-**Entity Framework Core (EF Core)** is Microsoft's official ORM for .NET. It lets you:
+> **Entity Framework Core (EF Core)** is Microsoft's official ORM for .NET. It lets you:
 
 - Query data using LINQ
 - Insert, update, and delete records with C# objects
