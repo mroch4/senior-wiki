@@ -1,8 +1,8 @@
 ## Phase 1.1 – C# Advanced
 
 1. [Async/Await internals](01%20Async%20Await.md)
-2. Task vs Thread vs ThreadPool
-3. Value types vs Reference types
+2. [Task/Thread/ThreadPool](02%20Task%20vs%20Thread%20vs%20ThreadPool.md)
+3. [Value/Reference types](03%20Value%20types%20vs%20Reference%20types.md)
 4. Boxing/Unboxing
 5. Span<T>, Memory<T>
 6. [Records](06%20Records.md)
