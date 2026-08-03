@@ -9,9 +9,9 @@
 7. [Polly](07%20Polly.md)
 8. [Message Broker](08%20Message%20Broker.md)
 
-[Minimal APIs](/Phase%201.2%20-%20ASP.NET%20Core/05%20Minimal%20APIs.md)
-[MediatR](/Phase%202%20–%20Architecture/10%20MediatR.md)
-[CQRS](/Phase%202%20–%20Architecture/09%20CQRS.md)
+- [Minimal APIs](/Phase%201.2%20-%20ASP.NET%20Core/05%20Minimal%20APIs.md)
+- [MediatR](/Phase%202%20–%20Architecture/10%20MediatR.md)
+- [CQRS](/Phase%202%20–%20Architecture/09%20CQRS.md)
 
 | Status   | Count | Id      |
 | -------- | ----- | ------- |
