@@ -13,8 +13,13 @@
 11. [Reflection](11%20Reflection.md)
 12. Source Generators (high level)
 
-1/12
-
 Typical question:
 
 > Explain what happens internally when you use async/await.
+
+| Status   | Count | Id      |
+| -------- | ----- | ------- |
+| Template | 2     | 9, 11   |
+| Started  | 3     | 1, 2, 3 |
+| Done     | 2     | 6, 7    |
+| Total    | 12    | 7/12    |

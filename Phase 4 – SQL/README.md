@@ -13,4 +13,7 @@
 10. [Investigate slow query](10%20Investigate%20slow%20query.md)
 11. [Clustered vs nonclustered index]()
 
-5/11
+| Status | Count | Id              |
+| ------ | ----- | --------------- |
+| Done   | 5     | 4, 5, 9, 10, 11 |
+| Total  | 11    | 5/11            |

@@ -1,6 +1,19 @@
-**Polly** is a .NET resilience library that helps applications **handle transient failures** such as temporary network issues, service outages, and timeouts. It is widely used in **microservices** because remote service calls are inherently unreliable.
+# Polly
+
+## Table of content
+
+## What is Polly?
+
+> Polly is a .NET resilience library that helps applications **handle transient failures** such as temporary network issues, service outages, and timeouts. It is widely used in **microservices** because remote service calls are inherently unreliable.
 
 Think of Polly as a **safety net** around your HTTP, gRPC, or database calls.
+
+# Interview Tips
+
+❌
+✅
+
+---
 
 # Why Do We Need Polly?
 

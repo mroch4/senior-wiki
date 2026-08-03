@@ -1,4 +1,17 @@
-Docker is one of the most important technologies in modern .NET development because it lets you **package an application together with everything it needs to run** (runtime, libraries, configuration) into a **container**. The application then behaves the same on your laptop, a test server, or in production.
+# Docker
+
+## Table of content
+
+## What is Docker?
+
+> Docker is one of the most important technologies in modern .NET development because it lets you **package an application together with everything it needs to run** (runtime, libraries, configuration) into a **container**. The application then behaves the same on your laptop, a test server, or in production.
+
+# Interview Tips
+
+❌
+✅
+
+---
 
 # Why Docker?
 

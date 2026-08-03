@@ -10,7 +10,10 @@
 8. Message Queue
 9. Event-driven architecture
 
-1/9
+| Status | Count | Id  |
+| ------ | ----- | --- |
+| Done   | 1     | 1   |
+| Total  | 9     | 1/9 |
 
 Technologies worth knowing:
 

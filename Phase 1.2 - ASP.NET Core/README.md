@@ -12,8 +12,12 @@
 10. Health Checks
 11. Background Services
 
-4/11
-
 Typical question:
 
 > Why shouldn't DbContext be Singleton?
+
+| Status   | Count | Id         |
+| -------- | ----- | ---------- |
+| Template | 1     | 8          |
+| Done     | 4     | 1, 2, 4, 5 |
+| Total    | 11    | 5/11       |

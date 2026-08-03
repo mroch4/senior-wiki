@@ -6,7 +6,7 @@
 4. [YAGNI](04%20YAGNI.md)
 5. ACID
 6. [Clean Architecture](06%20Clean%20Architecture.md)
-7. Onion Architecture
+7. [Onion Architecture](07%20Onion%20Architecture.md)
 8. Hexagonal Architecture
 9. [CQRS](09%20CQRS.md)
 10. [MediatR](10%20MediatR.md)
@@ -15,8 +15,12 @@
 13. Unit of Work
 14. Specification Pattern
 
-3/14
-
 Typical question:
 
 > When would you NOT use Repository Pattern?
+
+| Status   | Count | Id                |
+| -------- | ----- | ----------------- |
+| Template | 3     | 1, 6, 10          |
+| Done     | 6     | 2, 3, 4, 7, 9, 12 |
+| Total    | 14    | 9/14              |
