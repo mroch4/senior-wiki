@@ -3,20 +3,14 @@
 1. JOINs
 2. CTE
 3. Window Functions
-4. Indexes
-5. Execution Plans
+4. [Indexes](04%20Indexes.md)
+5. [Execution Plan](05%20Execution%20Plan.md)
 6. Deadlocks
 7. Isolation Levels
 8. Transactions
 
-0/8
+9. [SQL Server connection pool](09%20SQL%20Server%20connection%20pool.md)
+10. [Investigate slow query](10%20Investigate%20slow%20query.md)
+11. [Clustered vs nonclustered index]()
 
-Typical question:
-
-> Why is this query slow? How to investigate slow query?
-
-> Difference between SQL vs NOSQL?
-
-> What is SQL serwer connection pooling?
-
-> Difference between clustered vs nonclustered index?
+5/11

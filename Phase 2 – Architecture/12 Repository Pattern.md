@@ -2,6 +2,25 @@
 
 ## Table of Content
 
+1. [What is Repository Pattern?](#what-is-repository-pattern)
+   - [Why use a Repository?](#why-use-a-repository)
+2. [Basic Example](#basic-example)
+3. [Benefits](#benefits)
+   - [Separation of concerns](#separation-of-concerns)
+   - [Easier testing](#easier-testing)
+   - [Centralized queries](#centralized-queries)
+   - [Hide database technology](#hide-database-technology)
+4. [Generic Repository](#generic-repository)
+   - [Why Generic Repository is controversial](#why-generic-repository-is-controversial)
+5. [Microsoft's recommendation](#microsofts-recommendation)
+6. [When a Repository **does** make sense](#when-a-repository-does-make-sense)
+7. [Repository + Unit of Work](#repository--unit-of-work)
+8. [Repository in Clean Architecture](#repository-in-clean-architecture)
+9. [Interview Tips](#interview-tips)
+   - [Cheat Sheet](#cheat-sheet)
+   - [Should I always create a Generic Repository?](#should-i-always-create-a-generic-repository)
+   - [When should I create repositories with EF Core?](#when-should-i-create-repositories-with-ef-core)
+
 ## What is Repository Pattern?
 
 > The **Repository Pattern** is a design pattern that provides an abstraction layer between your application and the data access logic. It hides the details of how data is stored (SQL Server, PostgreSQL, MongoDB, etc.) and exposes a collection-like interface for working with entities.

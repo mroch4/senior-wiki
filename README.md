@@ -36,12 +36,6 @@
 - lock/wait
 - best practices
 
-## Microservices
-
-- Diff between monolith and microservice
-- Eventual consistency in microservice
-- Message broker
-
 ## Misc
 
 - OAuth, OIDC, OAuth2
