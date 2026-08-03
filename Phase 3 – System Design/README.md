@@ -25,5 +25,3 @@ Technologies worth knowing:
 5. Azure Functions
 6. Docker
 7. Kubernetes (basic understanding)
-
-0/7
