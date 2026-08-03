@@ -8,12 +8,13 @@
 6. Monitoring
 7. Security
 8. Message Queue
-9. Event-driven architecture
+9. [Event-driven architecture](09%20Event-driven%20architecture.md)
 
-| Status | Count | Id  |
-| ------ | ----- | --- |
-| Done   | 1     | 1   |
-| Total  | 9     | 1/9 |
+| Status      | Count | Id  |
+| ----------- | ----- | --- |
+| Done        | 1     | 1   |
+| In Progress | 1     | 9   |
+| Total       | 9     | 2/9 |
 
 Technologies worth knowing:
 
