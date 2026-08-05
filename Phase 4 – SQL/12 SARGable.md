@@ -1,4 +1,4 @@
-# ## SARGable (Search ARGument Able) in SQL (Search ARGument Able) in SQL
+# SARGable (Search ARGument Able) in SQL (Search ARGument Able) in SQL
 
 ## Table of content
 
