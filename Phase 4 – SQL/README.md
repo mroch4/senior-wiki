@@ -12,8 +12,9 @@
 9. [SQL Server connection pool](09%20SQL%20Server%20connection%20pool.md)+
 10. [Investigate slow query](10%20Investigate%20slow%20query.md)+
 11. [Clustered vs nonclustered index](11%20Clustered%20vs%20nonclustered%20index.md)+
+12. [SARGable](12%20SARGable.md)
 
-| Status | Count | Id              |
-| ------ | ----- | --------------- |
-| Done   | 5     | 4, 5, 9, 10, 11 |
-| Total  | 11    | 5/11            |
+| Status | Count | Id                           |
+| ------ | ----- | ---------------------------- |
+| Done   | 6     | 1, 2, 3, 4, 5, 9, 10, 11, 12 |
+| Total  | 12    | 9/12                         |
