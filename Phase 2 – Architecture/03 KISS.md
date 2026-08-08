@@ -149,5 +149,3 @@ These principles complement each other:
 > "KISS stands for _Keep It Simple, Stupid_. The principle encourages choosing the simplest design that satisfies the requirements. Simple solutions are easier to understand, test, debug, and maintain. In .NET, this means avoiding unnecessary abstractions, design patterns, or distributed architectures until there's a clear business or technical need for them."
 
 For senior .NET interviews, it's also useful to know that **KISS is about avoiding accidental complexity, not necessary complexity**. If a problem genuinely requires a more sophisticated design (e.g., CQRS for independent read/write scaling or Saga for distributed transactions), then that complexity is justified. The goal is to make the solution **as simple as possible, but no simpler**.
-
-[Top](#table-of-content)

@@ -13,13 +13,16 @@
 11. [Reflection](11%20Reflection.md)
 12. Source Generators (high level)
 
+13. [CLR (Common Language Runtime)](13%20CLR.md)
+14. [lock/SemaphoreSlim](14%20Lock%20Semaphore.md)
+
 Typical question:
 
 > Explain what happens internally when you use async/await.
 
-| Status      | Count | Id      |
-| ----------- | ----- | ------- |
-| Template    | 2     | 9, 11   |
-| In Progress | 3     | 1, 2, 3 |
-| Done        | 2     | 6, 7    |
-| Total       | 12    | 7/12    |
+| Status      | Count | Id           |
+| ----------- | ----- | ------------ |
+| Template    | 2     | 9, 11        |
+| In Progress | 3     | 1, 2, 3      |
+| Done        | 2     | 6, 7, 13, 14 |
+| Total       | 14    | 9/14         |

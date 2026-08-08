@@ -9,12 +9,13 @@
 7. Security
 8. Message Queue
 9. [Event-driven architecture](09%20Event-driven%20architecture.md)
+10. [Stateless/statefull application](10%20Stateless%20stateful.md)
 
-| Status      | Count | Id  |
-| ----------- | ----- | --- |
-| Done        | 1     | 1   |
-| In Progress | 1     | 9   |
-| Total       | 9     | 2/9 |
+| Status      | Count | Id    |
+| ----------- | ----- | ----- |
+| Done        | 2     | 1, 10 |
+| In Progress | 1     | 9     |
+| Total       | 10    | 2/10  |
 
 Technologies worth knowing:
 
