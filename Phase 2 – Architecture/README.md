@@ -14,13 +14,14 @@
 12. [Repository Pattern](12%20Repository%20Pattern.md)
 13. Unit of Work
 14. Specification Pattern
+15. [OOP](13%20OOP.md)
 
 Typical question:
 
 > When would you NOT use Repository Pattern?
 
-| Status   | Count | Id                |
-| -------- | ----- | ----------------- |
-| Template | 3     | 1, 6, 10          |
-| Done     | 6     | 2, 3, 4, 7, 9, 12 |
-| Total    | 14    | 9/14              |
+| Status   | Count | Id                    |
+| -------- | ----- | --------------------- |
+| Template | 3     | 1, 6, 10              |
+| Done     | 6     | 2, 3, 4, 7, 9, 12, 15 |
+| Total    | 15    | 10/15                 |
