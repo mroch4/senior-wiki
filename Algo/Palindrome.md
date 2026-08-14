@@ -5,6 +5,8 @@
 ```csharp
 bool IsPalindrome(string input)
 {
+    //var letters = new string(code.Where(char.IsLetter).ToArray()).ToLower();
+
     int left = 0;
     int right = input.Length - 1;
 
