@@ -6,10 +6,9 @@
 4. Moq
 5. Integration Tests
 6. Unit Tests
-7. TestContainers (nice bonus)
+7. [Testcontainers](07%20Testcontainers.md)
 
-0/7
-
-Typical question:
-
-> What should NOT be mocked?
+| Status | Count | Id  |
+| ------ | ----- | --- |
+| Done   | 1     | 7   |
+| Total  | 7     | 1/7 |
