@@ -11,6 +11,9 @@ For example:
 ```csharp
 bool IsValid(string input)
 {
+    //var brackets = "(){}[]";
+    //var filtered = input.Where(x => brackets.Contains(x));
+
     var stack = new Stack<char>();
 
     foreach (char c in input)
@@ -44,22 +47,3 @@ bool IsValid(string input)
 The key concept is **LIFO**:
 
 > Last In, First Out.
-
-For:
-
-```text
-([{}])
-```
-
-the stack behaves roughly like:
-
-```text
-(
-(
-[
-(
-[
-{
-```
-
-Then the closing brackets must match the most recently opened bracket.

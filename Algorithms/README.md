@@ -1,17 +1,17 @@
 # Algorithms
 
-| Topic          | What you should remember                   |
-| -------------- | ------------------------------------------ |
-| Binary search  | Left / middle / right                      |
-| Duplicates     | `HashSet<T>`                               |
-| FizzBuzz       | `%` modulo                                 |
-| Frequencies    | `Dictionary<char, int>`                    |
-| Merge arrays   | Two pointers                               |
-| Palindrome     | Two pointers                               |
-| Parentheses    | `Stack<char>`                              |
-| Reverse string | Loop backwards / `Array.Reverse`           |
-| Two Sum        | `Dictionary`                               |
-| OOP            | Inheritance + polymorphism + encapsulation |
+| Topic                                 | What you should remember                   |
+| ------------------------------------- | ------------------------------------------ |
+| [Binary search](Binary%20search.md)   | Left / middle / right                      |
+| [Duplicates](Duplicates.md)           | `HashSet<T>`                               |
+| [FizzBuzz](FizzBuzz.md)               | `%` modulo                                 |
+| [Frequencies](Frequencies.md)         | `Dictionary<char, int>`                    |
+| [Merge arrays](Merge%20arrays.md)     | Two pointers                               |
+| [Palindrome](Palindrome.md)           | Two pointers                               |
+| [Parentheses](Parentheses.md)         | `Stack<char>`                              |
+| [Reverse string](Reverse%20string.md) | Loop backwards / `Array.Reverse`           |
+| [Two Sum](Reverse%20string.md)        | `Dictionary`                               |
+| OOP                                   | Inheritance + polymorphism + encapsulation |
 
 # BankAccount hierarchy
 
