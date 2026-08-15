@@ -20,9 +20,8 @@ Typical question:
 
 > Explain what happens internally when you use async/await.
 
-| Status      | Count | Id           |
-| ----------- | ----- | ------------ |
-| Template    | 2     | 9, 11        |
-| In Progress | 3     | 1, 2, 3      |
-| Done        | 2     | 6, 7, 13, 14 |
-| Total       | 14    | 9/14         |
+| Status      | Count | Id                  |
+| ----------- | ----- | ------------------- |
+| In Progress | 3     | 1, 2, 3             |
+| Done        | 6     | 6, 7, 9, 11, 13, 14 |
+| Total       | 14    | 9/14                |

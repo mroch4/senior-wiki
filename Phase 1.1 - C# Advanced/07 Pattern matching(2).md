@@ -1,3 +1,21 @@
+## Table of Content
+
+1. [Pattern Matching and Flow Analysis](#1-pattern-matching-and-flow-analysis)
+2. [Variable Patterns with Discards](#2-variable-patterns-with-discards)
+3. [Recursive Patterns](#3-recursive-patterns)
+4. [Extended Property Patterns (C# 10)](#4-extended-property-patterns-c-10)
+5. [Pattern Matching with Records](#5-pattern-matching-with-records)
+6. [Exhaustiveness Checking](#6-exhaustiveness-checking)
+7. [Combining Patterns with `when`](#7-combining-patterns-with-when)
+8. [Pattern Matching and Generic Code](#8-pattern-matching-and-generic-code)
+9. [Type Pattern vs Polymorphism](#9-type-pattern-vs-polymorphism)
+10. [Span and String Pattern Matching](#10-span-and-string-pattern-matching)
+11. [`switch` Expression Evaluation Order](#11-switch-expression-evaluation-order)
+12. [Pattern Matching with Nullable Reference Types](#12-pattern-matching-with-nullable-reference-types)
+13. [Advanced Example: Minimal API Endpoint](#13-advanced-example-minimal-api-endpoint)
+14. [Property Pattern + Logical Pattern Combination](#14-property-pattern--logical-pattern-combination)
+15. [Interview Tips](#interview-tips)
+
 ## 1. Pattern Matching and Flow Analysis
 
 The compiler understands patterns and performs **definite assignment analysis**.
@@ -421,44 +439,7 @@ if(user is
 
 This reads almost like business rules.
 
-# Senior Interview Questions
-
-## Is pattern matching a replacement for polymorphism?
-
-> No. Pattern matching is better for closed hierarchies where new operations are added frequently. Polymorphism is better for open hierarchies where new types are added frequently.
-
-## Does pattern matching use reflection?
-
-> No. A type pattern is compiled into runtime type checks (`isinst` IL instruction), not reflection.
-
-```csharp
-obj is Customer
-```
-
-## Does pattern matching create objects?
-
-Usually no.
-
-Example:
-
-```csharp
-obj is Customer c
-```
-
-does not create a new Customer. It creates only a reference variable pointing to the existing object.
-
-## Why is pattern matching important in Domain Driven Design?
-
-Because domain rules often look like:
-
-```
-IF Order
-AND Customer is Premium
-AND Total > threshold
-THEN Apply discount
-```
-
-Pattern matching expresses these rules directly.
+# Interview Tips
 
 For a senior .NET developer, the most important patterns to master are:
 
@@ -471,3 +452,40 @@ For a senior .NET developer, the most important patterns to master are:
 7. **Nullable flow analysis integration**
 
 These are heavily used in modern ASP.NET Core, Minimal APIs, CQRS, and domain logic.
+
+Is pattern matching a replacement for polymorphism?
+
+> No. Pattern matching is better for closed hierarchies where new operations are added frequently. Polymorphism is better for open hierarchies where new types are added frequently.
+
+Does pattern matching use reflection?
+
+> No. A type pattern is compiled into runtime type checks (`isinst` IL instruction), not reflection.
+
+```csharp
+obj is Customer
+```
+
+Does pattern matching create objects?
+
+> Usually no.
+
+Example:
+
+```csharp
+obj is Customer c
+```
+
+does not create a new Customer. It creates only a reference variable pointing to the existing object.
+
+Why is pattern matching important in Domain Driven Design?
+
+> Because domain rules often look like:
+
+```
+IF Order
+AND Customer is Premium
+AND Total > threshold
+THEN Apply discount
+```
+
+Pattern matching expresses these rules directly.

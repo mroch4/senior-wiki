@@ -2,30 +2,45 @@
 
 ## Table of content
 
+1. [What is Docker?](#what-is-docker)
+2. [Without Docker](#without-docker)
+3. [Virtual Machine vs Docker](#virtual-machine-vs-docker)
+   - [Virtual Machine](#virtual-machine)
+   - [Docker Container](#docker-container)
+4. [Docker Terminology](#docker-terminology)
+   - [Image](#image)
+   - [Container](#container)
+5. [Dockerfile](#dockerfile)
+6. [Multi-Stage Builds](#multi-stage-builds)
+7. [Docker Commands](#docker-commands)
+   - [Build an image](#build-an-image)
+   - [Run a container](#run-a-container)
+   - [Listing Containers](#listing-containers)
+   - [Stop a Container](#stop-a-container)
+   - [Remove a Container](#remove-a-container)
+   - [List Images](#list-images)
+   - [Remove an Image](#remove-an-image)
+8. [Volumes](#volumes)
+9. [Networks](#networks)
+10. [Environment Variables](#environment-variables)
+11. [Docker Compose](#docker-compose)
+12. [Docker in Microservices](#docker-in-microservices)
+13. [Docker vs Kubernetes](#docker-vs-kubernetes)
+14. [Best Practices](#best-practices)
+15. [Interview Tips](#interview-tips)
+
 ## What is Docker?
 
-> Docker is one of the most important technologies in modern .NET development because it lets you **package an application together with everything it needs to run** (runtime, libraries, configuration) into a **container**. The application then behaves the same on your laptop, a test server, or in production.
+> Docker is a containerization platform that packages an application and its dependencies (runtime, libraries, configuration) into a portable container, ensuring consistent execution across environments. The application then behaves the same on your laptop, a test server, or in production.
 
-# Interview Tips
+## Without Docker
 
-❌
-✅
+✅ Developer Machine: `Works!`
+❌ Production Server: `Doesn't work`
 
----
+This is the classic:
 
-# Why Docker?
-
-Without Docker:
-
-```text
-Developer Machine
-    |
-    | Works!
-    |
-Production Server
-    |
-    | Doesn't work
-```
+> It works on my machine.
 
 Typical reasons:
 
@@ -34,39 +49,33 @@ Typical reasons:
 - Different OS
 - Configuration differences
 
-This is the classic:
+Docker solves this (the same image runs everywhere):
 
-> "It works on my machine."
-
-Docker solves this.
-
-```text
+```
 Application
-     +
+ +
 .NET Runtime
-     +
+ +
 Dependencies
-     +
+ +
 Configuration
-     ↓
+ ↓
 Docker Image
 ```
 
-The same image runs everywhere.
-
-# Virtual Machine vs Docker
+## Virtual Machine vs Docker
 
 ### Virtual Machine
 
-```text
+```txt
 Hardware
-    │
+ │
 Host OS
-    │
+ │
 Hypervisor
-    │
+ │
 Guest OS
-    │
+ │
 Application
 ```
 
@@ -84,13 +93,13 @@ Disadvantages:
 
 ### Docker Container
 
-```text
+```
 Hardware
-    │
+ │
 Host OS
-    │
+ │
 Docker Engine
-    │
+ │
 Containers
 ```
 
@@ -103,19 +112,13 @@ Advantages:
 - Lower resource usage
 - Easy to scale
 
-# Docker Terminology
+## Docker Terminology
 
-## Image
+### Image
 
 An **image** is a read-only template.
 
 Think of it like a class in object-oriented programming.
-
-Example:
-
-```text
-aspnet:8.0
-```
 
 It contains:
 
@@ -123,29 +126,27 @@ It contains:
 - Linux
 - Required libraries
 
-## Container
+### Container
 
-A **container** is a running instance of an image.
+A container is a running instance of an **image**.
 
-Think:
-
-```text
+```
 Image
-   ↓
+ ↓
 Container
 ```
 
 Just as:
 
-```text
+```
 Class
-   ↓
+ ↓
 Object
 ```
 
 One image can create many containers.
 
-# Dockerfile
+## Dockerfile
 
 A **Dockerfile** contains instructions for building an image.
 
@@ -168,29 +169,29 @@ Meaning:
 - Copy application files.
 - Run `ProductService.dll`.
 
-# Multi-Stage Builds
+## Multi-Stage Builds
 
 In .NET, the common approach is a **multi-stage build**.
 
-```text
-Stage 1
+Stage 1:
+
+```
 SDK Image
-    │
+ |
 Build Application
-    │
+ |
 Publish
-    │
-Stage 2
+```
+
+Stage 2:
+
+```
 Runtime Image
-    │
+ |
 Copy Published Files
 ```
 
-Why?
-
-The .NET SDK image is large.
-
-The runtime image is much smaller.
+Why? The .NET SDK image is large, the runtime image is much smaller.
 
 Example:
 
@@ -216,7 +217,7 @@ ENTRYPOINT ["dotnet", "ProductService.dll"]
 
 This is the standard approach for production.
 
-# Docker Commands
+## Docker Commands
 
 Build an image:
 
@@ -244,19 +245,15 @@ docker run -p 8080:80 productservice
 
 Meaning:
 
-```text
+```
 Browser
-
-↓
-
+ |
 localhost:8080
-
-↓
-
+ |
 Container Port 80
 ```
 
-# Listing Containers
+### Listing Containers
 
 Running containers:
 
@@ -270,63 +267,51 @@ All containers:
 docker ps -a
 ```
 
-# Stop a Container
+### Stop a Container
 
 ```bash
 docker stop <container-id>
 ```
 
-# Remove a Container
+### Remove a Container
 
 ```bash
 docker rm <container-id>
 ```
 
-# List Images
+### List Images
 
 ```bash
 docker images
 ```
 
-# Remove an Image
+### Remove an Image
 
 ```bash
 docker rmi image-name
 ```
 
-# Volumes
+## Volumes
 
-Containers are **ephemeral**.
+Containers are **ephemeral** - if the container is deleted:
 
-If the container is deleted:
-
-```text
+```
 Container
-
-↓
-
+ |
 Database
-
-↓
-
+ |
 Delete Container
-
-↓
-
+ |
 Data Lost
 ```
 
-Volumes provide persistent storage.
+**Volumes provide persistent storage.**
 
-```text
+```
 Container
-
-↓
-
+ |
 Volume
-
-↓
-
+ |
 Disk
 ```
 
@@ -344,47 +329,38 @@ docker run -v sql-data:/var/opt/mssql ...
 
 Now the data survives even if the container is recreated.
 
-# Networks
+## Networks
 
 Containers communicate over Docker networks.
 
-```text
+```
 Order Service
-
-↓
-
+ |
 Docker Network
-
-↓
-
+ |
 Product Service
-
-↓
-
+ |
 Database
 ```
 
-Instead of IP addresses, containers can use service names.
+Instead of IP addresses, **containers can use service names**.
 
 Example:
 
-```text
+```
 Order Service
-
-↓
-
+ ↓
 http://product-service
 ```
 
-# Environment Variables
+## Environment Variables
 
 Avoid hardcoding configuration.
 
 Instead of:
 
 ```csharp
-string connection =
-"Server=localhost...";
+string connection = "Server=localhost...";
 ```
 
 Use:
@@ -395,11 +371,11 @@ Use:
 
 ASP.NET Core automatically reads environment variables into configuration.
 
-# Docker Compose
+## Docker Compose
 
 A microservices application often needs multiple containers:
 
-```text
+```
 Order Service
 
 Product Service
@@ -443,9 +419,9 @@ Stop everything:
 docker compose down
 ```
 
-# Docker in Microservices
+## Docker in Microservices
 
-```text
+```
            API Gateway
                 │
       ┌─────────┴─────────┐
@@ -468,7 +444,7 @@ Benefits:
 - Isolation
 - Easier upgrades
 
-# Docker vs Kubernetes
+## Docker vs Kubernetes
 
 A common interview question.
 
@@ -487,21 +463,10 @@ Kubernetes:
 
 Think of it this way:
 
-```text
-Docker
+- Docker - Creates Containers
+- Kubernetes - Manages Containers
 
-↓
-
-Creates Containers
-
-Kubernetes
-
-↓
-
-Manages Containers
-```
-
-# Best Practices
+## Best Practices
 
 - Use **multi-stage builds** to reduce image size.
 - Keep images small by including only what's needed at runtime.
@@ -510,18 +475,17 @@ Manages Containers
 - Use health checks so orchestrators can detect unhealthy containers.
 - Don't store persistent data inside the container filesystem; use volumes or external storage.
 
-# Common Interview Questions
+# Interview Tips
 
-### 1. What is Docker?
+> **Docker is a containerization platform that packages an application, its runtime, and dependencies into a portable container. In .NET microservices, each service is typically packaged as its own Docker image and deployed as a separate container. Docker Compose is commonly used for local development to run multiple services together, while Kubernetes is often used in production to orchestrate and scale those containers.**
 
-> Docker is a containerization platform that packages an application and its dependencies into a portable container, ensuring consistent execution across environments.
+What is the difference between an image and a container?
 
-### 2. What is the difference between an image and a container?
+> **Image**: A read-only template used to create containers.
 
-- **Image**: A read-only template used to create containers.
-- **Container**: A running instance of an image.
+> **Container**: A running instance of an image.
 
-### 3. Why use Docker for microservices?
+Why use Docker for microservices?
 
 - Consistent environments
 - Easy deployment
@@ -529,20 +493,14 @@ Manages Containers
 - Independent scaling
 - Better resource utilization than virtual machines
 
-### 4. What is a Docker volume?
+What is a Docker volume?
 
-A volume provides persistent storage outside the container, so data is preserved even if the container is removed.
+> A volume provides persistent storage outside the container, so data is preserved even if the container is removed.
 
-### 5. What is Docker Compose?
+What is Docker Compose?
 
-A tool for defining and running multiple containers (such as APIs, databases, and message brokers) with a single configuration file.
+> A tool for defining and running multiple containers (such as APIs, databases, and message brokers) with a single configuration file.
 
-### 6. What is a multi-stage build?
+What is a multi-stage build?
 
-A Docker build technique that uses one stage to compile and publish the application and a second, smaller stage containing only the runtime and published output. This reduces the final image size and improves security.
-
-## Interview Summary
-
-A strong interview answer is:
-
-> **Docker is a containerization platform that packages an application, its runtime, and dependencies into a portable container. In .NET microservices, each service is typically packaged as its own Docker image and deployed as a separate container. Docker Compose is commonly used for local development to run multiple services together, while Kubernetes is often used in production to orchestrate and scale those containers.**
+> A Docker build technique that uses one stage to compile and publish the application and a second, smaller stage containing only the runtime and published output. This reduces the final image size and improves security.
