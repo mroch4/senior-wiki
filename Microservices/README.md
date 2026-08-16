@@ -15,9 +15,8 @@
 - [CQRS](/Phase%202%20–%20Architecture/09%20CQRS.md)
 - [Event-driven architecture](09%20Event-driven%20architecture.md)
 
-| Status      | Count | Id            |
-| ----------- | ----- | ------------- |
-| Template    | 2     | 2, 3          |
-| In Progress | 2     | 7, 8          |
-| Done        | 4     | 1, 4, 5, 6, 9 |
-| Total       | 9     | 9/9           |
+| Status      | Count | Id                    |
+| ----------- | ----- | --------------------- |
+| In Progress | 1     | 8                     |
+| Done        | 6     | 1, 2, 3, 4, 5, 6, 7,9 |
+| Total       | 9     | 9/9                   |

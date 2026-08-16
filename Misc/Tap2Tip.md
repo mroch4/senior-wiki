@@ -1,5 +1,20 @@
 # Tap2Tip
 
+## Glossary
+
+**App URL** - https://www.tap2tip.pl
+
+**Cu** - currency unit (for example: PLN, EUR, USD)
+
+**Identity Token** - a unique Base62 identifier (`8f72a91c` for example) shared with a Customer in order to get a tip, aka IdT
+
+**IdT carriers**
+
+- 1st stage: QR code printed out or shown on a mobile phone
+- 2nd stage: NFC chip within a wristband or a plastic card
+
+**POS** - point of sale (payment terminal)
+
 ## Actors (app users)
 
 - **Receiver** - a person who owns a QR code (token) and receives a tip for a Customer, aka Rc
@@ -28,21 +43,6 @@ That's a case of `Uber` driver essentially, where a Cs can tip a driver after a 
 - `Uber`, `Bolt` and other 'taxi' drivers
 - `UberEats`, `Glovo`, `Wolt` delivery men
 - street musicians
-
-## Glossary
-
-**App URL** - https://www.tap2tip.pl
-
-**Cu** - currency unit (for example: PLN, EUR, USD)
-
-**Identity Token** - a unique Base62 identifier (`8f72a91c` for example) shared with a Customer in order to get a tip, aka IdT
-
-**IdT carriers**
-
-- 1st stage: QR code printed out or shown on a mobile phone
-- 2nd stage: NFC chip within a wristband or a plastic card
-
-**POS** - point of sale (payment terminal)
 
 ## User Flows
 

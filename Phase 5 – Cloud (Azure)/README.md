@@ -8,6 +8,4 @@
 6. Key Vault
 7. Application Insights
 8. Azure DevOps
-9. CI/CD
-
-0/9
+9. [CI/CD](09%20CI%20CD.md)

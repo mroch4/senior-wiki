@@ -2,28 +2,42 @@
 
 ## Table of content
 
+1. [What is Polly?](#what-is-polly)
+2. [Why Do We Need Polly?](#why-do-we-need-polly)
+3. [What Is a Transient Fault?](#what-is-a-transient-fault)
+4. [Polly Strategies](#polly-strategies)
+   - [Retry](#1-retry)
+     - [Retry Delay](#retry-delay)
+     - [Exponential Backoff](#exponential-backoff)
+   - [Circuit Breaker](#2-circuit-breaker)
+     - [Without Circuit Breaker](#without-circuit-breaker)
+     - [With Circuit Breaker](#with-circuit-breaker)
+     - [States](#states)
+     - [Why It Matters](#why-it-matters)
+   - [Timeout](#3-timeout)
+   - [Fallback](#4-fallback)
+   - [Bulkhead Isolation](#5-bulkhead-isolation)
+5. [Polly with HttpClient](#polly-with-httpclient)
+6. [Polly in Microservices](#polly-in-microservices)
+7. [When to Retry?](#when-to-retry)
+8. [Polly vs Retry](#polly-vs-retry)
+9. [Best Practices](#best-practices)
+10. [Cheat Sheet](#cheat-sheet)
+11. [Interview Tips](#interview-tips)
+
 ## What is Polly?
 
 > Polly is a .NET resilience library that helps applications **handle transient failures** such as temporary network issues, service outages, and timeouts. It is widely used in **microservices** because remote service calls are inherently unreliable.
 
 Think of Polly as a **safety net** around your HTTP, gRPC, or database calls.
 
-# Interview Tips
+## Why Do We Need Polly?
 
-❌
-✅
+Suppose the **Order Service** calls the **Payment Service**:
 
----
-
-# Why Do We Need Polly?
-
-Suppose the **Order Service** calls the **Payment Service**.
-
-```text
+```
 Order Service
-      │
-      │ HTTP Request
-      ▼
+ │ HTTP Request
 Payment Service
 ```
 
@@ -34,36 +48,31 @@ What if:
 - A timeout occurs?
 - The service returns HTTP 503 (Service Unavailable)?
 
-Without resilience:
+### Without resilience:
 
-```text
+```
 Order Service
-      │
-      ▼
+ |
 Payment Service
-      │
-      ▼
-Failure
+ |
+❌ Failure
 ```
 
 The order fails immediately.
 
-With Polly:
+### With Polly:
 
-```text
+```
 Order Service
-      │
-      ▼
+ |
 Retry
-      │
-      ▼
+ |
 Payment Service
-      │
-      ▼
-Success
+ |
+✅ SUCCESS
 ```
 
-# What Is a Transient Fault?
+## What Is a Transient Fault?
 
 A transient fault is a **temporary problem** that may succeed if you try again.
 
@@ -84,64 +93,37 @@ Examples of **non-transient** failures:
 
 Retrying these usually doesn't help.
 
-# Polly Strategies
+## Polly Strategies
 
-Polly provides several resilience strategies:
-
-1. Retry
-2. Circuit Breaker
-3. Timeout
-4. Fallback
-5. Bulkhead Isolation
-6. Rate Limiter (Polly v8 via resilience pipeline integration)
-
-Let's look at each one.
-
-# 1. Retry
+### 1. Retry
 
 If a request fails, Polly retries automatically.
 
 Without retry:
 
-```text
+```
 Request
-
-↓
-
+ ↓
 Failure
-
-↓
-
-Done
 ```
 
 With retry:
 
-```text
+```
 Request
-
-↓
-
+ ↓
 Failure
-
-↓
-
+ ↓
 Retry
-
-↓
-
+ ↓
 Failure
-
-↓
-
+ ↓
 Retry
-
-↓
-
+ ↓
 Success
 ```
 
-### Example
+#### Example
 
 ```csharp
 builder.Services.AddHttpClient<IPaymentService, PaymentService>()
@@ -163,198 +145,119 @@ builder.Services.AddHttpClient("PaymentApi")
     });
 ```
 
-# Retry Delay
+#### Retry Delay
 
 Retrying immediately isn't always a good idea.
 
 Better approach:
 
-```text
+```
 Try 1
-
-↓
-
+ ↓
 Wait 1 second
-
-↓
-
+ ↓
 Try 2
-
-↓
-
+ ↓
 Wait 2 seconds
-
-↓
-
+ ↓
 Try 3
 ```
 
 This is called **backoff**.
 
-# Exponential Backoff
+#### Exponential Backoff
 
-Instead of:
-
-```text
-1
-
-1
-
-1
-```
-
-Use:
-
-```text
-1
-
-2
-
-4
-
-8
-
-16
-```
+Instead of: `1/1/1`
+Use: `1/2/4/8/16`
 
 This reduces pressure on an already struggling service.
 
-# 2. Circuit Breaker
+### 2. Circuit Breaker
 
 Imagine repeatedly calling a service that is down.
 
-Without Circuit Breaker:
+#### Without Circuit Breaker
 
-```text
+```
 Request
-
-↓
-
+ ↓
 Fail
-
-↓
-
+ ↓
 Request
-
-↓
-
+ ↓
 Fail
-
-↓
-
+ ↓
 Request
-
-↓
-
+ ↓
 Fail
 ```
 
 This wastes resources.
 
-## With Circuit Breaker
+#### With Circuit Breaker
 
 After several failures:
 
-```text
+```
 Circuit
-
-↓
-
+ ↓
 OPEN
 ```
 
 Requests fail immediately without contacting the remote service.
 
-After a wait period:
+After a wait period: `HALF OPEN` One request is allowed through.
 
-```text
-HALF OPEN
+If it succeeds: `CLOSED` normal operation resumes.
+
+If it fails: `OPEN` again.
+
+#### States
+
 ```
-
-One request is allowed through.
-
-If it succeeds:
-
-```text
-CLOSED
-```
-
-Normal operation resumes.
-
-If it fails:
-
-```text
-OPEN
-```
-
-Again.
-
-### States
-
-```text
 Closed
-
-↓
-
+ ↓
 Failures
-
-↓
-
+ ↓
 Open
-
-↓
-
+ ↓
 Wait
-
-↓
-
+ ↓
 Half Open
-
-↓
-
+ ↓
 Success
-
-↓
-
+ ↓
 Closed
 ```
 
-### Why It Matters
+#### Why It Matters
 
-Without Circuit Breaker:
+❌ Without Circuit Breaker:
 
 - Thousands of useless requests
 - Cascading failures
 - Resource exhaustion
 
-With Circuit Breaker:
+✅ With Circuit Breaker:
 
 - Protects your application
 - Gives the failing service time to recover
 
-# 3. Timeout
+### 3. Timeout
 
-Sometimes a service doesn't fail—it just hangs.
+Sometimes a service doesn't fail — it just hangs.
 
 Example:
 
-```text
+```
 Order Service
-
-↓
-
+ ↓
 Payment Service
-
-↓
-
+ ↓
 Waiting...
-
-↓
-
+ ↓
 Waiting...
-
-↓
-
+ ↓
 Waiting...
 ```
 
@@ -362,101 +265,61 @@ Timeout stops waiting after a configured period.
 
 Example:
 
-```text
+```
 Wait 5 seconds
-
-↓
-
+ ↓
 Still no response
-
-↓
-
+ ↓
 Timeout
 ```
 
 The application can then retry, return an error, or use a fallback.
 
-# 4. Fallback
+### 4. Fallback
 
-Suppose the Product Service is unavailable.
+Suppose the Product Service is unavailable:
 
-Instead of an error:
+Instead of an error: `503 Service Unavailable` return cached data.
 
-```text
-503 Service Unavailable
 ```
-
-Return cached data.
-
-```text
 Request
-
-↓
-
+ ↓
 Failure
-
-↓
-
+ ↓
 Fallback
-
-↓
-
+ ↓
 Cached Products
 ```
 
 Users still receive a response, although it may not be the latest data.
 
-# 5. Bulkhead Isolation
+### 5. Bulkhead Isolation
 
-Imagine a ship.
-
-If one compartment floods:
-
-```text
-█████
-
-█████
-
-█████
-
-█████
-```
-
-Only one section fills with water.
-
-The ship stays afloat.
-
+Imagine a ship - if one compartment floods only one section fills with water. The ship stays afloat.
 Software works similarly.
 
-Without Bulkhead:
+#### Without Bulkhead:
 
-```text
+```
 1000 requests
-
-↓
-
+ ↓
 Everything blocked
 ```
 
-With Bulkhead:
+#### With Bulkhead:
 
-```text
+```
 Payment
-
 Inventory
-
 Shipping
-
 Notifications
 ```
 
-Each area has its own resource limits.
+Each area has **its own resource limits**. A problem in one doesn't affect the others.
 
-A problem in one doesn't affect the others.
+## Polly with HttpClient
 
-# Polly with HttpClient
-
-The most common usage is protecting outbound HTTP calls.
+The most common usage is protecting outbound HTTP calls:
 
 ```csharp
 builder.Services
@@ -466,23 +329,17 @@ builder.Services
 
 This enables a sensible set of resilience strategies for HTTP requests in .NET 8+.
 
-# Polly in Microservices
+## Polly in Microservices
 
 Example:
 
-```text
+```
 Order Service
-
-↓
-
+ ↓
 Payment Service
-
-↓
-
+ ↓
 Inventory Service
-
-↓
-
+ ↓
 Notification Service
 ```
 
@@ -494,7 +351,7 @@ Every network call is a candidate for:
 
 These are where transient failures are most common.
 
-# When to Retry?
+## When to Retry?
 
 Retry:
 
@@ -514,26 +371,11 @@ Don't retry:
 
 These errors are unlikely to succeed on another attempt.
 
-# Common Interview Scenario
-
-**Question:** The Payment Service is temporarily unavailable. How would you make the Order Service more resilient?
-
-**Answer:**
-
-- Configure a timeout so requests don't hang indefinitely.
-- Retry a few times with exponential backoff for transient failures.
-- Use a circuit breaker to stop sending requests if the service is consistently failing.
-- Optionally use a fallback (such as queuing the order for later processing or returning cached information, depending on business requirements).
-
-# Polly vs Retry
-
-A common interview question:
+## Polly vs Retry
 
 > Isn't Polly just a retry library?
 
-No.
-
-Retry is only **one** resilience strategy.
+No. Retry is only **one** resilience strategy.
 
 Polly also supports:
 
@@ -543,7 +385,7 @@ Polly also supports:
 - Bulkhead Isolation
 - Composition of multiple strategies into a resilience pipeline
 
-# Best Practices
+## Best Practices
 
 - Retry only transient failures.
 - Use **exponential backoff** instead of immediate retries.
@@ -552,7 +394,7 @@ Polly also supports:
 - Log retries and failures for monitoring and troubleshooting.
 - Avoid infinite retries.
 
-# Quick Comparison
+## Cheat Sheet
 
 | Strategy        | Purpose                            | Example                                |
 | --------------- | ---------------------------------- | -------------------------------------- |
@@ -562,8 +404,15 @@ Polly also supports:
 | Fallback        | Provide an alternative response    | Return cached product data             |
 | Bulkhead        | Isolate resource usage             | Payment failures don't block inventory |
 
-## Interview Summary
+# Interview Tips
 
-If asked **"What is Polly?"**, a concise answer is:
+What is Polly?
 
-> **Polly is a .NET resilience library used to make applications more fault-tolerant. It helps handle transient failures by applying strategies such as retry, timeout, circuit breaker, fallback, and bulkhead isolation. In modern .NET (8+), these capabilities are integrated into the built-in HTTP resilience pipeline and are commonly used to protect service-to-service communication in microservice architectures.**
+> Polly is a .NET resilience library used to make applications more fault-tolerant. It helps handle transient failures by applying strategies such as retry, timeout, circuit breaker, fallback, and bulkhead isolation. In modern .NET (8+), these capabilities are integrated into the built-in HTTP resilience pipeline and are commonly used to protect service-to-service communication in microservice architectures.
+
+The Payment Service is temporarily unavailable. How would you make the Order Service more resilient?
+
+- Configure a timeout so requests don't hang indefinitely.
+- Retry a few times with exponential backoff for transient failures.
+- Use a circuit breaker to stop sending requests if the service is consistently failing.
+- Optionally use a fallback (such as queuing the order for later processing or returning cached information, depending on business requirements).
