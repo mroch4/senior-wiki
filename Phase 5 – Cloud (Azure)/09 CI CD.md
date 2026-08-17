@@ -2,6 +2,13 @@
 
 ## Table of content
 
+1. [What is CI/CD?](#what-is-cicd)
+2. [CI — Continuous Integration](#ci-—-continuous-integration)
+3. [CD — Continuous Delivery](#cd-—-continuous-delivery)
+4. [CD — Continuous Deployment](#cd-—-continuous-deployment)
+5. [Easy way to remember](#easy-way-to-remember)
+6. [Interview Tips](#interview-tips)
+
 ## What is CI/CD?
 
 > CI/CD = Continuous Integration / Continuous Delivery (or Deployment)

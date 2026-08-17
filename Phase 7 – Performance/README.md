@@ -1,12 +1,12 @@
 ## Phase 7 – Performance
 
-1. Memory allocations
-2. GC generations
-3. LOH
-4. BenchmarkDotNet
-5. Caching
-6. Pooling
-7. Async scalability
-8. Database optimization
-
-0/8
+| Id  | Topic                 | Pages |
+| --- | --------------------- | ----- |
+| 01  | Memory allocations    | -     |
+| 02  | GC generations        | -     |
+| 03  | LOH                   | -     |
+| 04  | BenchmarkDotNet       | -     |
+| 05  | Caching               | -     |
+| 06  | Pooling               | -     |
+| 07  | Async scalability     | -     |
+| 08  | Database optimization | -     |
