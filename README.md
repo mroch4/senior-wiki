@@ -1,3 +1,24 @@
+| Phase | Topic                                                                  | Pages |
+| ----- | ---------------------------------------------------------------------- | ----- |
+| 1.1   | [C# Advanced](<Phase 1.1 - C# Advanced/README.md>)                     |       |
+| 1.2   | [ASP.NET Core](<Phase 1.2 - ASP.NET Core/README.md>)                   | 24    |
+| 1.3   | [Entity Framework Core](<Phase 1.3 - Entity Framework Core/README.md>) | 0     |
+| 2     | [Architecture](<Phase 2 – Architecture/README.md>)                     | 31    |
+| 3     | [System Design](<Phase 3 – System Design/README.md>)                   | 8     |
+| 4     | [SQL](<Phase 4 – SQL/README.md>)                                       | 41    |
+| 5     | [Cloud (Azure)](<Phase 5 – Cloud (Azure)/README.md>)                   | 3     |
+| 6     | [Testing](<Phase 6 – Testing/README.md>)                               | 3     |
+| 7     | [Performance](<Phase 7 – Performance/README.md>)                       | 0     |
+| 8     | [Behavioral Questions](<Phase 8 – Behavioral Questions/README.md>)     | 0     |
+| ----- | ---------------------------------------------------------------------- | ----- |
+|       | [Algorithms](Algorithms/README.md)                                     | 11    |
+|       | [Code](Code/README.md)                                                 | 2     |
+|       | [Frontend](Frontend/README.md)                                         |       |
+|       | [Microservices](Microservices/README.md)                               | 45    |
+|       | [Patterns](Patterns/README.md)                                         | 2     |
+| ----- | ---------------------------------------------------------------------- | ----- |
+|       | TOTAL                                                                  | 45    |
+
 ## Questions
 
 **Technical**
@@ -29,12 +50,6 @@
 - Build a rate limiter.
 
 ---
-
-## Core
-
-- semaphore slim
-- lock/wait
-- best practices
 
 ## Misc
 

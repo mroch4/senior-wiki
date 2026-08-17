@@ -12,6 +12,8 @@
 | 08  | Message Queue                                                    | -     |
 | 09  | [Event-driven architecture](09%20Event-driven%20architecture.md) | -     |
 | 10  | [Stateless/statefull application](10%20Stateless%20stateful.md)  | 3     |
+| --- | ---------------------------------------------------------------- | ----- |
+|     | TOTAL                                                            | 8     |
 
 Technologies worth knowing:
 

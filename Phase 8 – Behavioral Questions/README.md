@@ -10,3 +10,5 @@
 | 06  | Biggest mistake             | -     |
 | 07  | Leading a feature           | -     |
 | 08  | Mentoring juniors           | -     |
+| --- | --------------------------- | ----- |
+|     | TOTAL                       | 0     |

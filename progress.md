@@ -1,11 +1,10 @@
 ## Empty template
 
-| Phase                    | Id  | Topic                                                                            |
-| ------------------------ | --- | -------------------------------------------------------------------------------- |
-| Phase 1.2 – ASP.NET Core | 08  | [Options pattern](/Phase%201.2%20-%20ASP.NET%20Core/08%20Options%20pattern.md)   |
-| Phase 2 – Architecture   | 01  | [SOLID](/Phase%202%20–%20Architecture/01%20SOLID.md)                             |
-| Phase 2 – Architecture   | 06  | [Clean Architecture](/Phase%202%20–%20Architecture/06%20Clean%20Architecture.md) |
-| Phase 2 – Architecture   | 10  | [MediatR](/Phase%202%20–%20Architecture/10%20MediatR.md)                         |
+| Phase                    | Id  | Topic                                                                          |
+| ------------------------ | --- | ------------------------------------------------------------------------------ |
+| Phase 1.2 – ASP.NET Core | 08  | [Options pattern](/Phase%201.2%20-%20ASP.NET%20Core/08%20Options%20pattern.md) |
+| Phase 2 – Architecture   | 01  | [SOLID](/Phase%202%20–%20Architecture/01%20SOLID.md)                           |
+| Phase 2 – Architecture   | 10  | [MediatR](/Phase%202%20–%20Architecture/10%20MediatR.md)                       |
 
 ## In Progress
 
