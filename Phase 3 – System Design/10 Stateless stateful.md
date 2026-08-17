@@ -1,4 +1,4 @@
-# Stateless/statefull application
+# Stateless/stateful application
 
 ## Table of content
 
@@ -15,7 +15,7 @@
    - [Stateful](#stateful)
 10. [Interview Tips](#interview-tips)
 
-## What is difference between stateless/statefull application?
+## What is difference between stateless/stateful application?
 
 > A **stateless application service** does not keep client-specific data between requests. A **stateful application service** stores information about previous interactions and uses it in future requests.
 

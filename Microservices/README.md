@@ -5,8 +5,8 @@
 | 01  | [Microservices](01%20Microservices.md)                                   | 8     |
 | 02  | [Outbox Pattern](02%20Outbox%20Pattern.md)                               | +     |
 | 03  | [Saga Pattern](03%20Saga%20Pattern.md)                                   | +     |
-| 04  | [gRPC](02%20gRPC.md)                                                     | 4     |
-| 05  | [Ocelot](03%20Ocelot.md)                                                 | 4     |
+| 04  | [gRPC](04%20gRPC.md)                                                     | 4     |
+| 05  | [Ocelot](05%20Ocelot.md)                                                 | 4     |
 | 06  | [Docker](06%20Docker.md)                                                 | +     |
 | 07  | [Polly](07%20Polly.md)                                                   | +     |
 | 08  | [Message Broker](08%20Message%20Broker.md)                               | -     |

@@ -2,6 +2,40 @@
 
 ## Table of content
 
+1. [What are Microservices?](#what-are-microservices)
+2. [Core Characteristics](#core-characteristics)
+3. [Example Structure](#example-structure)
+4. [Monolith vs Microservices](#monolith-vs-microservices)
+   - [Monolith](#monolith)
+   - [Microservices](#microservices)
+5. [When should you use Microservices?](#when-should-you-use-microservices)
+6. [Core Principles](#core-principles)
+   - [Single Responsibility](#single-responsibility)
+   - [Database per Service](#database-per-service)
+7. [Communication](#communication)
+   - [Synchronous](#synchronous)
+     - [REST APIs](#rest-apis)
+     - [gRPC](#grpc)
+   - [Asynchronous Messaging](#asynchronous-messaging)
+8. [Common Design Patterns](#common-design-patterns)
+   - [API Gateway](#api-gateway)
+   - [Service Discovery](#service-discovery)
+   - [Event-Driven Architecture](#event-driven-architecture)
+   - [Distributed Transactions](#distributed-transactions)
+   - [Saga Pattern](#saga-pattern)
+9. [Eventual Consistency](#eventual-consistency)
+10. [Resilience Patterns](#resilience-patterns)
+11. [Observability](#observability)
+    - [Logging](#logging)
+    - [Metrics](#metrics)
+    - [Distributed Tracing](#distributed-tracing)
+12. [Containers](#containers)
+13. [Kubernetes](#kubernetes)
+14. [Technologies Used](#technologies-used)
+15. [Common .NET Stack](#common-net-stack)
+16. [Interview Tips](#interview-tips)
+17. [Interview Questions](#interview-questions)
+
 ## What are Microservices?
 
 A **microservice** is a small, independently deployable application responsible for a **single** business capability. Each service owns its own code, business logic, and usually its own database. Services communicate over APIs or messaging rather than direct database access.

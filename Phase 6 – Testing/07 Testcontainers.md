@@ -2,6 +2,15 @@
 
 ## Table of content
 
+1. [What are Testcontainers?](#what-are-testcontainers)
+2. [Why use Testcontainers?](#why-use-testcontainers)
+3. [Simple example](#simple-example)
+4. [Typical ASP.NET Core integration test](#typical-aspnet-core-integration-test)
+5. [Common examples](#common-examples)
+6. [Why not always use Testcontainers?](#why-not-always-use-testcontainers)
+7. [Testcontainers vs mocks](#testcontainers-vs-mocks)
+8. [Interview Tips](#interview-tips)
+
 ## What are Testcontainers?
 
 > **Testcontainers** lets you run real dependencies—such as databases, Redis, RabbitMQ, or other services—in **Docker containers during integration tests**.

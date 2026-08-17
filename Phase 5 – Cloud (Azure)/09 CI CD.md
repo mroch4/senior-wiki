@@ -111,7 +111,7 @@ No manual production approval.
 
 # Interview Tips
 
-> **CI is about continuously integrating code changes and automatically building and testing them. CD takes the validated artifact and automates its delivery through environments. With Continuous Delivery, production usually has a manual approval step, whereas Continuous Deployment automatically releases successful changes to production.**
+> CI is about continuously integrating code changes and automatically building and testing them. CD takes the validated artifact and automates its delivery through environments. With Continuous Delivery, production usually has a manual approval step, whereas Continuous Deployment automatically releases successful changes to production.
 
 For example, in **Azure DevOps**, you might have a CI pipeline that builds and tests your .NET application and publishes a Docker image, followed by a CD pipeline that deploys that image to **Azure App Service or Kubernetes**.
 

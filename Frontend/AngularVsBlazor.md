@@ -1,3 +1,5 @@
+# Angular vs Blazor
+
 Angular and Blazor have similar component lifecycles, but the hook names and some behaviors differ.
 
 | Angular                   | Blazor                                          | Purpose                                             |

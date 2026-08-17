@@ -2,6 +2,34 @@
 
 ## Table of content
 
+1. [What is RESTful APIs?](#what-is-restful-apis)
+2. [REST Principles](#rest-principles)
+   - [Client-Server](#1-client-server)
+   - [Stateless](#2-stateless)
+   - [Cacheable](#3-cacheable)
+   - [Uniform Interface](#4-uniform-interface)
+   - [Layered System](#5-layered-system)
+   - [Code on Demand (optional)](#6-code-on-demand-optional)
+3. [HTTP Methods](#http-methods)
+4. [URI Versioning](#uri-versioning)
+   - [Header Versioning](#header-versioning)
+   - [Query Parameter Versioning](#query-parameter-versioning)
+   - [Resource Expansion / No Versioning](#resource-expansion--no-versioning)
+5. [Error handling](#error-handling)
+6. [IDEMPOTENCY](#idempotency)
+   - [Idempotent methods](#idempotent-methods)
+   - [Non-idempotent](#non-idempotent)
+   - [Depends on implementation](#depends-on-implementation)
+7. [Caching](#caching)
+   - [HTTP caching headers](#http-caching-headers)
+   - [ETags](#etags)
+   - [Full Layered Caching Architecture](#full-layered-caching-architecture)
+8. [HATEOAS](#hateoas)
+9. [Authentication and authorization](#authentication-and-authorization)
+   - [Authentication](#authentication)
+   - [Authorization](#authorization)
+   - [Why the distinction matters](#why-the-distinction-matters)
+
 ## What is RESTful APIs?
 
 > A RESTful API is an API that follows the architectural principles of **REST (Representational State Transfer)**. It exposes resources through a uniform interface using standard HTTP methods. It is **stateless**, **cacheable**, and follows architectural constraints like **client–server** separation and **layered systems**. Resources are represented with URLs, and operations are performed via GET/POST/PUT/PATCH/DELETE.
