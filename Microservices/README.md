@@ -12,5 +12,4 @@
 | 08  | [Message Broker](08%20Message%20Broker.md) | -     |
 | 09  | [Kubernetes](09%20Kubernetes.md)           | 5     |
 | 09  | [Kubernetes(2)](<09%20Kubernetes(2).md>)   | 3     |
-| --- | ------------------------------------------ | ----- |
 |     | TOTAL                                      | 45    |

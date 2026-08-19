@@ -13,7 +13,6 @@
 | 09  | Migrations             | -     |
 | 10  | Compiled Queries       | -     |
 | 11  | Bulk operations        | -     |
-| --- | ---------------------- | ----- |
 |     | TOTAL                  | 0     |
 
 Typical question:

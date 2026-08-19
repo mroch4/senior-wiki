@@ -11,5 +11,4 @@
 | 07  | Application Insights     | -     |
 | 08  | Azure DevOps             | -     |
 | 09  | [CI/CD](09%20CI%20CD.md) | 2     |
-| --- | ------------------------ | ----- |
 |     | TOTAL                    | 2     |

@@ -10,5 +10,4 @@
 | 06  | Pooling               | -     |
 | 07  | Async scalability     | -     |
 | 08  | Database optimization | -     |
-| --- | --------------------- | ----- |
 |     | TOTAL                 | 0     |

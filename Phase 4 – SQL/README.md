@@ -11,10 +11,8 @@
 | 06  | Deadlocks                                                                        | -     |
 | 07  | Isolation Levels                                                                 | -     |
 | 08  | Transactions                                                                     | -     |
-| --- | -------------------------------------------------------------------------------- | ----- |
 | 09  | [SQL Server connection pool](09%20SQL%20Server%20connection%20pool.md)           | 5     |
 | 10  | [Investigate slow query](10%20Investigate%20slow%20query.md)                     | 4     |
 | 11  | [Clustered vs nonclustered index](11%20Clustered%20vs%20nonclustered%20index.md) | 7     |
 | 12  | [SARGable](12%20SARGable.md)                                                     | 3     |
-| --- | -------------------------------------------------------------------------------- | ----- |
 |     | TOTAL                                                                            | 41    |

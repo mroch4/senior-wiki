@@ -9,5 +9,4 @@
 | 05  | Integration Tests                        | -     |
 | 06  | Unit Tests                               | -     |
 | 07  | [Testcontainers](07%20Testcontainers.md) | 3     |
-| --- | ---------------------------------------- | ----- |
 |     | TOTAL                                    | 3     |

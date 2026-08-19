@@ -13,7 +13,6 @@
 | 09  | Logging                                                | -     |
 | 10  | Health Checks                                          | -     |
 | 11  | Background Services                                    | -     |
-| --- | ------------------------------------------------------ | ----- |
 |     | TOTAL                                                  | 24    |
 
 Typical question:
