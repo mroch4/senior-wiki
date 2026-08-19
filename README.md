@@ -13,6 +13,7 @@
 | 7     | [Performance](<Phase 7 – Performance/README.md>)                       | 0     |
 | 8     | [Behavioral Questions](<Phase 8 – Behavioral Questions/README.md>)     | 0     |
 |       | [Algorithms](Algorithms/README.md)                                     | 11    |
+|       | [Angular](Angular/README.md)                                           |       |
 |       | [Code](Code/README.md)                                                 | 2     |
 |       | [Frontend](Frontend/README.md)                                         | 8     |
 |       | [Microservices](Microservices/README.md)                               | 45    |

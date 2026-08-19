@@ -100,11 +100,11 @@
 ### Angular
 
 - DOM
-- virtual DOM vs. HTML
+- virtual DOM vs. HTML(!)
 - lifecycle methods
 - Promise vs. Observable
 - interceptors
-- \*ngFor and TrackBy
+- \*ngFor and TrackBy(!)
 
 ### Git
 
@@ -114,17 +114,17 @@
 
 ### .NET/C#
 
-- GC generation
+- GC generation(!)
 - Authentication vs. Authorization
-- Span/Memory
-- abstract vs. interface
-- yield
-- SynchronizationContext & ConfigureAwait
+- Span/Memory(!)
+- abstract vs. interface(!)
+- yield(!)
+- SynchronizationContext & ConfigureAwait(!)
 - record is a **reference** type, unless defined as **struct** - then a value type
 - name a couple of Design Patterns (Command, CQRS, Fascade, Repository, REST, Saga, Outbox)
-- Enumerable vs. Collection vs. List
-- Q: Why a method always return async Task then async void?
-- Q: Task: is more IO or CPU?
+- Enumerable vs. Collection vs. List(!)
+- Q: Why a method always return async Task then async void?(!)
+- Q: Task: is more IO or CPU?(!)
 - Q: What's the hidden danger in having big amount of extensions methods? A: Intellisense fails
 
 ### REST
@@ -135,7 +135,7 @@
 ### SQL
 
 - DELETE vs. TRUNCATE
-- transaction isolation
+- transaction isolation(!)
 - CTE
 - Window Functions
-- Q: What's better for Id: UUID or number?
+- Q: What's better for Id: UUID or number?(!)

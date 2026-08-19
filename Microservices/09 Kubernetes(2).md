@@ -1,4 +1,4 @@
-# Realistic **.NET API + Docker + Kubernetes** example
+# Realistic .NET API + Docker + Kubernetes example
 
 ## Table of content
 

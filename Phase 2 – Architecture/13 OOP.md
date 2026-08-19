@@ -2,6 +2,20 @@
 
 ## Table of content
 
+1. [What is OOP?](#what-is-oop)
+2. [Encapsulation](#encapsulation)
+   - [Interview point](#interview-point)
+3. [Abstraction](#abstraction)
+   - [Encapsulation vs abstraction](#encapsulation-vs-abstraction)
+4. [Inheritance](#inheritance)
+   - [Important Senior-level point](#important-senior-level-point)
+5. [Polymorphism](#polymorphism)
+6. [Interface vs abstract class](#interface-vs-abstract-class)
+   - [Interface](#interface)
+   - [Abstract class](#abstract-class)
+   - [Simple interview answer](#simple-interview-answer)
+7. [Interview Tips](#interview-tips)
+
 ## What is OOP?
 
 > OOP is a programming paradigm where we structure software around objects that combine data (state) and behavior (methods).

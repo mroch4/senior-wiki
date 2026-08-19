@@ -1,4 +1,4 @@
-# FirstOrDefault() vs SingleOrDefault()
+# `FirstOrDefault()` vs `SingleOrDefault()`
 
 ## Core difference
 
