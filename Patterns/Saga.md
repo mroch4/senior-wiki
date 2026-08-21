@@ -1,4 +1,4 @@
-# Saga Pattern
+# Saga Pattern (Architectural)
 
 ## Order service publishes:
 

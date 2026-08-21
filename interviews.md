@@ -1,4 +1,4 @@
-## 1. 2026-07- ITDS - Senior .NET Developer – Microservices
+## ❌ 1. 2026-07- ITDS - Senior .NET Developer – Microservices
 
 ### REST
 
@@ -9,7 +9,7 @@
 - investigate slow SQL query
 - clustered vs. nonclustered index
 
-## 2. 2026-07-24 STX NEXT
+## ❌ 2. 2026-07-24 STX NEXT
 
 ### Angular
 
@@ -36,7 +36,7 @@
 - investigate slow SQL query
 - clustered vs. nonclustered index
 
-## 4. 2026-08-13 ORSTED
+## ❌ 4. 2026-08-13 ORSTED
 
 ### Angular
 

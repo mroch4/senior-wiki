@@ -1,4 +1,4 @@
-# Outbox Pattern
+# Outbox Pattern (Architectural)
 
 ## Entity
 

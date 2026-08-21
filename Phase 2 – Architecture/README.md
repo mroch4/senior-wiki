@@ -16,9 +16,9 @@
 | 11  | DDD basics                                                                               | -     |
 | 12  | [Repository Pattern](12%20Repository%20Pattern.md)                                       | 4     |
 | 12  | [Repository Pattern(2)](</Phase%202%20–%20Architecture/12%20Repository%20Pattern(2).md>) | 6     |
-| 13  | Unit of Work                                                                             | -     |
-| 14  | Specification Pattern                                                                    | -     |
-| 15  | [OOP](13%20OOP.md)                                                                       | 3     |
+| 13  | [Unit of Work](13%20Unit%20of%20Work.md)                                                 | -     |
+| 14  | [Specification Pattern](14%20Specification%20Pattern.md)                                 | -     |
+| 15  | [OOP](15%20OOP.md)                                                                       | 3     |
 |     | TOTAL                                                                                    | 31    |
 
 Typical question:
