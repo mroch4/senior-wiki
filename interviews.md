@@ -132,7 +132,7 @@
 - name a couple of Design Patterns
 - Enumerable vs. Collection vs. List(!)
 - Q: Why a method always return async Task then async void?(!)
-- Q: Task: is more IO or CPU?(!)
+- Q: Task: is more **IO** or CPU?
 - Q: What's the hidden danger in having big amount of extensions methods? A: Intellisense fails
 
 ### REST
