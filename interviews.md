@@ -69,6 +69,12 @@
 - decorators
 - pipes
 
+### Git
+
+- rebase vs. merge
+- reset vs. revert
+- squash commit
+
 ### JS
 
 - '1'+2+3=? 1+'2'+3=? 1+1+'3'=?
@@ -109,8 +115,10 @@
 ### Git
 
 - branching strategy
-- rebase vs merge
-- reset
+- rebase vs. merge
+- reset vs. revert
+- squash commit
+- git hooks
 
 ### .NET/C#
 
@@ -121,7 +129,7 @@
 - yield(!)
 - SynchronizationContext & ConfigureAwait(!)
 - record is a **reference** type, unless defined as **struct** - then a value type
-- name a couple of Design Patterns (Command, CQRS, Fascade, Repository, REST, Saga, Outbox)
+- name a couple of Design Patterns
 - Enumerable vs. Collection vs. List(!)
 - Q: Why a method always return async Task then async void?(!)
 - Q: Task: is more IO or CPU?(!)

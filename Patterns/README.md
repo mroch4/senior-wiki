@@ -4,13 +4,13 @@ There are **23 GoF (Gang of Four) design patterns**, divided into 3 categories.
 
 Concerned with **object creation**.
 
-| #   | Pattern              | Main idea                                    |
-| --- | -------------------- | -------------------------------------------- |
-| 1   | **Abstract Factory** | Create families of related objects           |
-| 2   | **Builder**          | Build complex objects step by step           |
-| 3   | **Factory Method**   | Let subclasses decide which object to create |
-| 4   | Prototype            | Create objects by cloning existing objects   |
-| 5   | **Singleton**        | Ensure only one instance exists              |
+| #   | Pattern                                         | Main idea                                    |
+| --- | ----------------------------------------------- | -------------------------------------------- |
+| 1   | **Abstract Factory**                            | Create families of related objects           |
+| 2   | [Builder](/Patterns/Builder.md)                 | Build complex objects step by step           |
+| 3   | [Factory Method](/Patterns/Factory%20method.md) | Let subclasses decide which object to create |
+| 4   | Prototype                                       | Create objects by cloning existing objects   |
+| 5   | [Singleton](/Patterns/Singleton.md)             | Ensure only one instance exists              |
 
 ### 2. Structural — 7
 
@@ -40,7 +40,7 @@ Concerned with **communication and responsibility between objects**.
 | 18  | Memento                                                             | Capture and restore an object's state                      |
 | 19  | [Observer](/Patterns/Observer.md)                                   | Notify dependent objects when state changes                |
 | 20  | **State**                                                           | Change behavior when internal state changes                |
-| 21  | **Strategy**                                                        | Encapsulate interchangeable algorithms                     |
+| 21  | [Strategy](/Patterns/Strategy.md)                                   | Encapsulate interchangeable algorithms                     |
 | 22  | **Template Method**                                                 | Define algorithm structure while allowing steps to vary    |
 | 23  | Visitor                                                             | Add operations to object structures without modifying them |
 
