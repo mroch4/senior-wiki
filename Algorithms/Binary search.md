@@ -17,7 +17,6 @@ int BinarySearch(int[] numbers, int target)
             return middleIndex;
         }
 
-
         if (numbers[middleIndex] < target)
         {
             leftIndex = middleIndex + 1;

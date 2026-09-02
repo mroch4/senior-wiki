@@ -17,8 +17,7 @@
 | 11  | [Reflection](11%20Reflection.md)                                       | 5     |
 | 12  | Source Generators (high level)                                         | -     |
 | 13  | [CLR (Common Language Runtime)](13%20CLR.md)                           | 3     |
-| 14  | [lock/SemaphoreSlim](14%20Lock%20Semaphore.md)                         | 4     |
-|     | TOTAL                                                                  | 36    |
+|     | TOTAL                                                                  | 32    |
 
 Typical question:
 

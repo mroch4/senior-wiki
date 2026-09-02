@@ -60,12 +60,12 @@ finally
 
 ### Characteristics
 
-✅ Simple
-✅ Very fast (in-process)
-✅ Synchronous only
-✅ Only one owner at a time
-❌ Cannot be awaited
-❌ Cannot be used across processes
+- ✅ Simple
+- ✅ Very fast (in-process)
+- ✅ Synchronous only
+- ✅ Only one owner at a time
+- ❌ Cannot be awaited
+- ❌ Cannot be used across processes
 
 Example problem:
 

@@ -73,6 +73,7 @@
 
 - rebase vs. merge
 - reset vs. revert
+- pull vs. fetch
 - squash commit
 
 ### JS
@@ -147,3 +148,38 @@
 - CTE
 - Window Functions
 - Q: What's better for Id: UUID or number?(!)
+
+## 7. 2026-08-25 EPAM
+
+### ✅ Chat asked:
+
+- SQL: isolation levels
+- SALT
+- mutex
+- EF: code first
+- EF: migrations
+- EF: tracking, AsNoTracking (default)
+- review code to find memory leaks
+
+### ✅ MD:
+
+- SQL: HAVING
+- Unit Testing: F.I.R.S.T. Principles
+- xUnit vs. nUnit
+- Redux hooks
+- how can we test/mock static class
+
+### ❌ Chat not asked:
+
+- SQL: many-to-many relation (student-teachers)
+- SDD
+- BDD - Behavior Driven Development
+- Dead Letter Queue
+- Azure Event Grid
+- Azure Storage (cool/hot tier)
+- Redux
+- .NET Standard
+
+## 8. 2026-08-26 Endava
+
+## 9. 2026-08-27 Sii/ABB/Hitachi

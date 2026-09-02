@@ -294,9 +294,9 @@ shape.CalculateArea();
 
 Use pattern matching when:
 
-✅ You own the operation
-✅ You have a closed set of types
-✅ Adding operations is more common than adding types
+- ✅ You own the operation
+- ✅ You have a closed set of types
+- ✅ Adding operations is more common than adding types
 
 Example:
 
@@ -313,8 +313,8 @@ Pattern matching is excellent.
 
 Use polymorphism when:
 
-✅ You frequently add new types
-✅ Each type owns its behavior
+- ✅ You frequently add new types
+- ✅ Each type owns its behavior
 
 Example:
 
