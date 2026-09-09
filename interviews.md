@@ -182,4 +182,48 @@
 
 ## 8. 2026-08-26 Endava
 
+### Angular
+
+- same service provided in root and component level (component level overrides)
+- factory method
+- observable operators (`.map`/`.pipe`/`.switchMap` - creates new stream)
+
+### Azure
+
+- Azure Service Bus vs. Azure Event Grid
+- pushing events to Angular
+- message/event consumer example
+
+### C#/.NET
+
+- attributes
+- reflection
+- LINQ
+- GC generations (0,1,2)
+- Disposable
+- `abstract` vs. `interface` (base behaviour implementation)
+- `async`/`await`
+- multithreading `Mutex` (`semaphoreSlim`/`lock`)
+- `throw` vs. `throw ex` (call stack trace)
+
+### SQL/EF Core
+
+- isolation levels
+- migrations (adding columns)
+- n+1 problem
+
+### Other
+
+- OWASP
+
 ## 9. 2026-08-27 Sii/ABB/Hitachi
+
+35% Angular (Redux, nested components)
+65% .NET (API)
+
+### Angular
+
+- `forJoin`
+- manage state using Redux vs. service
+- default `onpush`
+- change detection types
